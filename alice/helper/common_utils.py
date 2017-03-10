@@ -1,6 +1,16 @@
 from alice.helper.constants  import *
+import simplejson as json
+import requests
 
 class CommonUtils(object):
+    git_mappings = {   # keep this static by executing  getGithubUsers function once periodically as needed
+        "p00j4" : "pooja",
+    }
+    slack_mappings = { # keep this static by executing getSlackUsers function once periodically as needed
+    "pooja": "poojashah",
+    }
+
+
     @staticmethod
     def getSlackNicksFromGitNicks(key):
         if key in CommonUtils.git_mappings:
