@@ -15,8 +15,9 @@ def hello():
 
 
 class PushPayload():
-    API_START_PR = "https://api.github.com/repos/moengage/MoEngage/pulls/"
-    API_START_ISSUES = "https://api.github.com/repos/moengage/MoEngage/issues/"
+    repo = "GIVE_YOUR_REPO_NAME"
+    API_START_PR = "https://api.github.com/repos/%s/%s/pulls/" % (organisation, repo)
+    API_START_ISSUES = "https://api.github.com/repos/%s/%s/issues/" % (organisation, repo)
     EP_REVIEWS = "reviews"
     EP_COMMENTS = "comments"
     STATE_OPEN = "open"
